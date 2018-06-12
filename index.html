@@ -1,93 +1,269 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en-US">
-<!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!-- meta -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PyData Delhi</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- for Google -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
-    <meta name="copyright" content="">
-    <meta name="application-name" content="">
-    <!-- for Facebook -->
-    <meta property="og:title" content="">
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
-    <meta property="og:description" content="">
-    <!-- for Twitter -->
-    <meta name="twitter:card" content="">
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="">
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Favicons -->
-    <link rel="icon" href="img/favicon/favicon.ico" type="image/icon">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="1100x1100" href="img/favicon/apple-icon-1100x1100.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <title>PyData</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/flexslider.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicon/manifest.json">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+    jQuery(window).load(function() {
+        jQuery(".loader-overlay").fadeOut(1000);
+    });
+    </script>
+    <style>
+        .loader-overlay {
+        width: 100%;
+        height: 100%;
+        background: url('images/glitch.gif') center no-repeat #000;
+        z-index: 99999;
+        position: fixed;
+        }
+        .table {
+            white-space: nowrap;
+            width: 500px;
+            text-align: center;
+            background-color: "#D4E6EE";
+        }
+        
+        .history {
+            margin-left: 200px;
+        }
+        
+        .description {
+            padding-left: 30px;
+            padding-right: 200px;
+        }
+        
+        .partners {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <!-- Content -->
-    <p>PyData Delhi</p>
-    <p>Contact: <a href="mailto:delhi@pydata.org">delhi@pydata.org</a></p>
-    <!-- Scripts -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <div class="loader-overlay"></div>
+    <noscript>
+        <style>
+        .loader-overlay {
+            display: none;
+        }
+        </style>
+    </noscript>
+    <header>
+        <div id="head">
+            <div class="container">
+                <div class="col-sm-4 col-xs-12" id="logo">
+                    <a href="index.html"><img src="images/logo.png" data-no-retina /></a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="slider">
+        <div class="owl-carousel">
+            <div class="item">
+                <img src="images/homebanner.jpg" />
+            </div>
+            <div class="item">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <section>
+        <!-- Table -->
+        <table class="table" align="center" bgcolor="#D4E6EE">
+            <tr>
+                <td align="center">
+                    <a href='www.meetup.com'>
+                        <img src='images/meetup-red.png'>
+                    </a>
+                </td>
+                <td valign="middle">
+                    <font size=5>Meetup on 25 December</font>
+                </td>
+                <td align="center"><a href='www.meetup.com'><b>RSVP HERE</b></a>
+                    <br><a href='www.meetup.com'><b>Join Us</b></a></td>
+            </tr>
+        </table>
+    </section>
+    <br>
+    <br>
+    <section>
+        <div class="media history">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/youtube.jpg" width=350px height=300px>
+                </a>
+            </div>
+            <div class="media-body description">
+                <h4 class="media-heading">PyData</h4> The Battle of Prokhorovka (12 July 1943), one of the largest tank battles in history, was fought between Waffen-SS units of Nazi Germany and Red Army units of the Soviet Union during the Second World War on the Eastern Front.
+                The climax of the German offensive Operation Citadel, it resulted when the Soviet 5th Guards Tank Army intercepted the II SS-Panzer Corps of the German Wehrmacht near Prokhorovka.
+                <br>
+                <br>
+                <h4 class="media-heading">PyData Delhi</h4> The Soviet forces were decimated in the attack, but succeeded in preventing the Wehrmacht from capturing Prokhorovka and breaking through the last heavily fortified defensive belt. With the Germans unable to accomplish
+                their objective for Operation Citadel, they cancelled it and began redeploying their forces to deal with new pressing developments elsewhere. The failure of the operation marked the first time in the war that a major German offensive was
+                halted before it could break through enemy defences.
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="media history">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/numfocus.png" width=350px height=100px>
+                </a>
+            </div>
+            <div class="media-body description">
+                <h4 class="media-heading">NumFOCUS</h4> The Battle of Prokhorovka (12 July 1943), one of the largest tank battles in history, was fought between Waffen-SS units of Nazi Germany and Red Army units of the Soviet Union during the Second World War on the Eastern Front.
+                The climax of the German offensive Operation Citadel, it resulted when the Soviet 5th Guards Tank Army intercepted the II SS-Panzer Corps of the German Wehrmacht near Prokhorovka.
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <section>
+        <div id="nst">
+            <div class="container">
+                <div class="col-xs-12  wow fadeInUp" data-wow-delay="0.2s">
+                    <form action="//numfocus.us9.list-manage.com/subscribe/post?u=c4bde6125a526b0fe180fdc3d&amp;id=d97ca30fde" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="meetup-row">
+            <div class="container">
+                <div class="col-xs-12 meetup-inline">
+                    <div class="col-sm-3 col-xs-20 text-left inline-ics  wow fadeInLeft partners" data-wow-delay="0.1s">
+                        <font size=5><b>Past Venue Partners:</b></font>
+                    </div>
+                    <div class="col-sm-3 col-xs-12 inline-ics wow fadeInLeft" data-wow-delay="0.2s">
+                        <a href="https://anaconda.com/"><img src="images/continuum.png" width=150px height=100px></a>
+                    </div>
+                    <div class="col-sm-3 col-xs-12 inline-ics wow fadeInLeft" data-wow-delay="0.4s">
+                        <a href="https://microsoft.com/"><img src="images/micro.jpg" width=150px height=100px/></a>
+                    </div>
+                    <div class="col-sm-3 text-right col-xs-12 inline-ics wow fadeInLeft" data-wow-delay="0.5s">
+                        <a href="http://www.ibm.com/"><img src="images/ibm.png" width=150px height=100px /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div id="foot-cs">
+            <div class="container">
+                <div class="col-sm-6 col-xs-12 copyright">
+                    <p>
+                        <font size=4>&copy; 2016 | PyData Delhi
+                            <br> Contact Us : <a href="mailto:pydatadelhi@gmail.com">pydatadelhi@gmail.com</a></font>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
     <script>
-    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
-    </script>
-    <script src="js/vendor/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-    (function(b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-            function() {
-                (b[l].q = b[l].q || []).push(arguments)
+        jQuery(document).ready(function() {
+            jQuery("#head").sticky({
+                topSpacing: 0
             });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X', 'auto');
-    ga('send', 'pageview');
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                items: 1,
+                responsiveClass: true,
+                nav: false,
+            })
+        });
+
+        jQuery(window).load(function() {
+            jQuery('.flexslider').flexslider({
+                animation: "slide",
+                animationLoop: true,
+                itemMargin: 50,
+                minItems: 2,
+                directionNav: false,
+                itemWidth: 227,
+                maxItems: 4,
+                start: function() {
+                    // Vertically align sponsor logos.
+                    // First, determine maximum slide height.
+                    var largestSlideHeight = 0;
+                    $("div.sponsor-row .flexslider .slides li").each(function() {
+                        if ($(this).height() > largestSlideHeight) {
+                            largestSlideHeight = $(this).height();
+                        };
+                    });
+                    // Finally, figure out whether slide is smaller than maximum image,
+                    // and use this extra space as a top and bottom margin.
+                    $("div.sponsor-row .flexslider .slides li").each(function() {
+                        var slideHeight = $(this).height();
+                        var offset = ((largestSlideHeight - slideHeight) / 2);
+                        $(this).css("padding", offset + "px 0");
+                    });
+                },
+            });
+        });
+
+        var wow = new WOW({
+            boxClass: 'wow', // animated element css class (default is wow)
+            animateClass: 'animated', // animation css class (default is animated)
+            offset: 0, // distance to the element when triggering the animation (default is 0)
+            mobile: true, // trigger animations on mobile devices (default is true)
+            live: true, // act on asynchronously loaded content (default is true)
+            callback: function(box) {
+                // the callback is fired every time an animation is started
+                // the argument that is passed in is the DOM node being animated
+            },
+            scrollContainer: null // optional scroll container selector, otherwise use window
+        });
+        wow.init();
     </script>
 </body>
 
